@@ -11,18 +11,16 @@ int main() {
     Node<Squirrel> node_two(&squeaks);
     Node<Squirrel> node_three(&fluffybutt);
 
-    //        Cheeks
-    //       /      \
-    //   Squeaks   Mr. Fluffy Butt
     node_one.set_left(&node_two);
     node_one.set_right(&node_three);
 
-    Node<Squirrel>* retrieved_left  = node_one.left();
-    Node<Squirrel>* retrieved_right = node_one.right();
+    string root  = node_one.get_data()->get_name();
+    string left  = node_one.left()->get_data()->get_name();
+    string right = node_one.right()->get_data()->get_name();
 
-    cout << "Root:  " << node_one.get_data()->get_name()       << "\n";
-    cout << "Left:  " << retrieved_left->get_data()->get_name()  << "\n";
-    cout << "Right: " << retrieved_right->get_data()->get_name() << "\n";
+    cout << "    " << root << "\n";
+    cout << "    /      \\" << "\n";
+    cout << left << "   " << right << "\n";
 
     return 0;
 }
