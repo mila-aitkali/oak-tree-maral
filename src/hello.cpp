@@ -1,5 +1,5 @@
-#include <string>
+#include "hello.hpp"
 
-std::string hello() {
-   return "Hello World!";
-}
+Squirrel::Squirrel(string name) { this->name = name; }
+
+string Squirrel::get_name() { return this->name; }
